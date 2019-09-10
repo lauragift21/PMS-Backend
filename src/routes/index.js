@@ -9,7 +9,7 @@ routes.get('/locations', Population.getLocations);
 routes.post('/locations', Population.createLocation);
 routes.get('/locations/:id', Population.getOneLocation);
 routes.put('/locations/:id', Population.updateLocation);
-// routes.delete('/locations/:id', Population.deleteLocation);
+routes.delete('/locations/:id', Population.deleteLocation);
 
 routes.all('*', (req, res) => {
   res.status(404).send({ message: 'You\'ve hit a wrong endpoint, this endpoint does not exist'});

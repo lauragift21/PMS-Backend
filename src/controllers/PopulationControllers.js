@@ -153,4 +153,35 @@ export default class PopulationController {
       });
     }
   }
+
+  static async deleteLocation(req, res) {
+    try {
+        await Location.findByIdAndDelete(
+          { _id: req.params.id },
+          (error, location) => {
+          if (!location) res.status(404).json({
+            errors: {
+              status: '404',
+              message: 'Location not found'
+            }
+          })
+          if (location) {
+            res.status(200).json({
+              success: true,
+              message: 'Location deleted successfully',
+              data: {
+                location
+              }
+            })
+          }
+      });
+    } catch (error) {
+      res.status(500).json({
+        errors: {
+          status: '500',
+          message: error.message
+        }
+      });
+    }
+  }
 }
