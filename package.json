@@ -1,0 +1,37 @@
+{
+  "name": "pms-backend",
+  "version": "1.0.0",
+  "description": "A Population Management System that contains a list of locations and the total number of residents in each location broken down by gender.",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "start": "nodemon --exec babel-node src/app.js",
+    "lint": "eslint . --fix",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lauragift21/PMS-Backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lauragift21/PMS-Backend/issues"
+  },
+  "homepage": "https://github.com/lauragift21/PMS-Backend#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.0",
+    "@babel/node": "^7.6.1",
+    "@babel/preset-env": "^7.6.0",
+    "dotenv": "^8.1.0",
+    "eslint": "^6.3.0",
+    "nodemon": "^1.19.2"
+  }
+}

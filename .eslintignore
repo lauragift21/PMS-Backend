@@ -1,0 +1,4 @@
+/__tests__/unit
+/coverage
+/dist
+/node_modules
