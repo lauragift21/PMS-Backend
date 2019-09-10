@@ -3,6 +3,7 @@ import mongoose from 'mongoose';
 const PopulationSchema = new mongoose.Schema({
     location: {
       type: String,
+      trim: true,
     },
     maleResidents: {
       type:  Number,
@@ -12,11 +13,6 @@ const PopulationSchema = new mongoose.Schema({
     },
     totalResidents: {
       type: Number
-    },
-    status: {
-      type: String,
-      enum: ['active', 'inactive'],
-      default: ['active']
     }
   },
   { timestamps: { created_At: 'created_at' } }
