@@ -3,8 +3,8 @@ import Location from '../models/PopulationModel';
 export default class PopulationController {
   /**
    * @description - create a new location
-   * @param  {} req
-   * @param  {} res
+   * @param  {} req HTTP Request
+   * @param  {} res HTTP Request
    */
   static async createLocation(req, res) {
     try {
@@ -49,8 +49,8 @@ export default class PopulationController {
 
   /**
    *  @description - Get all locations
-   * @param  {} req
-   * @param  {} res
+   * @param  {} req HTTP Request
+   * @param  {} res HTTP Request
    * @param  {'active'}
    */
   static async getLocations(req, res) {
@@ -83,9 +83,10 @@ export default class PopulationController {
   }
 
   /**
-   * @param  {} req
-   * @param  {} res
-   * @param  {req.params.id}}
+   * @description - Get one location
+   * @param  {Object} res HTTP Request
+   * @param  {Object} res HTTP Request
+   * @param  {req.params.id}
    */
   static async getOneLocation(req, res) {
     try {
@@ -116,10 +117,10 @@ export default class PopulationController {
   }
 
   /**
-   * @param  {} req
-   * @param  {} res
-   * @param  {} req.body
-   * @param  {{locations}} data
+   * @description - Update a location
+   * @param  {Object} req HTTP Request
+   * @param  {Object} res HTTP Request
+   * @param  {Object} req.body
    */
   static async updateLocation(req, res) {
     try {
@@ -153,7 +154,11 @@ export default class PopulationController {
       });
     }
   }
-
+  /**
+   * @description  - Delete a location
+   * @param  {} res HTTP Request
+   * @param  {} res HTTP Request
+   */
   static async deleteLocation(req, res) {
     try {
         await Location.findByIdAndDelete(
