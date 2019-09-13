@@ -3,6 +3,8 @@ import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
 import logger from 'morgan';
 import 'dotenv/config';
+import swaggerUi from 'swagger-ui-express';
+import swaggerDocument from './swagger.json';
 import routes from './routes';
 
 const port = (process.env.PORT || 8080);
@@ -12,6 +14,10 @@ const app = express();
 
 // Logging middleware to console
 app.use(logger('dev'));
+
+// document with swagger ui
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+
 
 // Parse incoming request bodies
 app.use(bodyParser.urlencoded({ extended: false}));
