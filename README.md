@@ -8,6 +8,8 @@ A Population Management System that contains a list of locations and the total n
 - Update data for a specific locations
 - Delete a specified location
 
+[API documentation available here](https://pms-backend.herokuapp.com/api-docs)
+
 ## Technologies
 - Node.js
 - Express
