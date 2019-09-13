@@ -1,5 +1,23 @@
 {
   "presets": [
-    "@babel/preset-env"
+    [
+      "@babel/env",
+      {
+        "targets": {
+          "node": 4
+        },
+        "exclude": [
+          "transform-regenerator"
+        ]
+      }
+    ]
+  ],
+  "plugins": [
+    [
+      "module:fast-async",
+      {
+        "spec": true
+      }
+    ]
   ]
 }

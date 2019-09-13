@@ -7,9 +7,11 @@
     "test": "tests"
   },
   "scripts": {
-    "start": "nodemon --exec babel-node src/app.js",
+    "start:dev": "nodemon --exec babel-node src/app.js",
     "lint": "eslint . --fix",
-    "test": "mocha --require @babel/register 'src/**/**spec.js'"
+    "test": "mocha --require @babel/core @babel/register 'src/**/**spec.js'",
+    "build": "rimraf dist/ && babel src -d dist/ --ignore node_modules --copy-files",
+    "start": "npm run build && node dist/app.js"
   },
   "repository": {
     "type": "git",
@@ -29,6 +31,7 @@
     "mongoose": "^5.7.0"
   },
   "devDependencies": {
+    "@babel/cli": "^7.6.0",
     "@babel/core": "^7.6.0",
     "@babel/node": "^7.6.1",
     "@babel/preset-env": "^7.6.0",
@@ -39,6 +42,7 @@
     "dotenv": "^8.1.0",
     "eslint": "^6.3.0",
     "express-joi-validation": "^3.0.0",
+    "fast-async": "^6.3.8",
     "mocha": "^6.2.0",
     "morgan": "^1.9.1",
     "nodemon": "^1.19.2"
