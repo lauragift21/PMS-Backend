@@ -30,7 +30,8 @@
     "express": "^4.17.1",
     "mongoose": "^5.7.0",
     "morgan": "^1.9.1",
-    "body-parser": "^1.19.0"
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.1.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.6.0",
@@ -40,7 +41,6 @@
     "@babel/register": "^7.6.0",
     "chai": "^4.2.0",
     "chai-http": "^4.3.0",
-    "dotenv": "^8.1.0",
     "eslint": "^6.3.0",
     "express-joi-validation": "^3.0.0",
     "fast-async": "^6.3.8",
