@@ -28,7 +28,8 @@
     "@hapi/joi": "^15.1.1",
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "mongoose": "^5.7.0"
+    "mongoose": "^5.7.0",
+    "morgan": "^1.9.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.6.0",
@@ -44,7 +45,6 @@
     "express-joi-validation": "^3.0.0",
     "fast-async": "^6.3.8",
     "mocha": "^6.2.0",
-    "morgan": "^1.9.1",
     "nodemon": "^1.19.2"
   }
 }
